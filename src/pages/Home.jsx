@@ -7,7 +7,7 @@ const Home = () => {
       <div className='home-card'>
         <div className='home-card__lines'></div>
         <div className='home-card__imgBx'>
-          <img src="/public/images/photo__home.jpg" alt="" />
+          <img src="/images/photo__home.jpg" alt="" />
         </div>
         <div className='home-card-content'>
           <div className='home-card-content__details'>
