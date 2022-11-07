@@ -5,7 +5,7 @@
   min-height: 100vh;
   background: #333;
 }
-.container {
+.container-projects {
   position: relative;
   width: 1200px;
   display: flex;
@@ -14,7 +14,7 @@
   gap: 20px;
   flex-wrap: wrap;
 }
-.container .serviceBox {
+.container-projects .serviceBox {
   position: relative;
   width: 350px;
   height: 280px;
@@ -22,7 +22,7 @@
   border-radius: 20px;
   overflow: hidden;
 }
-.container .serviceBox .icon {
+.container-projects .serviceBox .icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -36,7 +36,7 @@
   z-index: 2;
   transition-delay: 0.25s;
 }
-.container .serviceBox:hover .icon {
+.container-projects .serviceBox:hover .icon {
   top: 30px;
   left: calc(50% - 40px);
   width: 80px;
@@ -44,7 +44,7 @@
   border-radius: 50%;
   transition-delay: 0s;
 }
-.container .serviceBox .content {
+.container-projects .serviceBox .content {
   position: relative;
   padding: 20px;
   color: #fff;
@@ -55,15 +55,15 @@
   transition: 0.5s;
   transition-delay: 0s;
 }
-.container .serviceBox:hover .content {
+.container-projects .serviceBox:hover .content {
   transform: scale(1);
   transition-delay: 0.25s;
 }
-.container .serviceBox .content h2 {
+.container-projects .serviceBox .content h2 {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-.container .serviceBox .content p {
+.container-projects .serviceBox .content p {
   font-weight: 300;
   line-height: 1.5em;
 }
