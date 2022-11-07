@@ -21,6 +21,7 @@
   background: #514451;
   border-radius: 20px;
   overflow: hidden;
+  z-index: 2;
 }
 .container-projects .serviceBox .icon {
   position: absolute;
