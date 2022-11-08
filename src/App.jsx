@@ -25,8 +25,8 @@ function App() {
       />
       <Routes>
         <Route path='/' element={<Home switchToggleButton={switchToggleButton} />} />
-        <Route path='/skills' element={<Skills />} />
-        <Route path='/projects' element={<Projects />} />
+        <Route path='/skills' element={<Skills switchToggleButton={switchToggleButton} />} />
+        <Route path='/projects' element={<Projects switchToggleButton={switchToggleButton} />} />
         <Route path='/contactMe' element={<ContactMe switchToggleButton={switchToggleButton} />} />
       </Routes>
       <BottomNavigationBar />
