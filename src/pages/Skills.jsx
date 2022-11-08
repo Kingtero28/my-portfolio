@@ -4,6 +4,7 @@ import './styles/skills.css'
 const Skills = () => {
   return (
     <body className='skills'>
+      {/* <h2 className='tittle' data-text="&nbsp;Mis Habilidades&nbsp;">&nbsp;Mis Habilidades&nbsp;</h2> */}
       <div className='container-skills'>
         <div className='scan'>
           <div className='html'></div>

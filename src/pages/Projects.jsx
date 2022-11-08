@@ -4,6 +4,7 @@ import './styles/projects.css'
 const Projects = () => {
   return (
     <body className='projects'>
+      {/* <h2 className='tittle' data-text="&nbsp;Mis Proyectos&nbsp;">&nbsp;Mis Proyectos&nbsp;</h2> */}
       <div className='container-projects'>
         <div className='serviceBox'>
           <div className='icon'><video src="/videos/WeatherApp.mp4" autoPlay muted loop playsInline></video></div>

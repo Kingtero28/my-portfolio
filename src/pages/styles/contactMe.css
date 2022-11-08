@@ -1,4 +1,5 @@
-.contact {
+.contactDark,
+.contactLight {
   position: relative;
   min-height: 100vh;
   padding: 50px 100px;
@@ -7,23 +8,40 @@
   align-items: center;
   flex-direction: column;
   background: #333;
-  /* padding-bottom: 100px; */
+  padding-top: 90px;
+  padding-bottom: 90px;
+  transition: 0.5s;
 }
-.contact .content {
+.contactLight {
+  background: #fff;
+}
+.contactDark .contentDark,
+.contactLight .contentLight {
   max-width: 800px;
   text-align: center;
 }
-.contact .content h2 {
+.contactDark .contentDark h2,
+.contactLight .contentLight h2 {
   font-size: 3em;
   color: white;
   font-weight: 500;
+  transition: 0.5s;
 }
-.contact .content p {
+.contactLight .contentLight h2 {
+  color: black;
+}
+.contactDark .contentDark p,
+.contactLight .contentLight p {
   color: #fff;
   font-size: 1.1em;
   font-weight: 300;
+  transition: 0.5s;
 }
-.container {
+.contactLight .contentLight p {
+  color: black;
+}
+.containerDark,
+.containerLight {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -31,18 +49,21 @@
   gap: 50px;
   margin-top: 30px;
 }
-.container .contactInfo {
+.containerDark .contactInfoDark,
+.containerLight .contactInfoLight {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
-.container .contactInfo .box {
+.containerDark .contactInfoDark .boxDark,
+.containerLight .contactInfoLight .boxLight {
   position: relative;
   padding: 20px 0;
   display: flex;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
-.container .contactInfo .box .icon {
+.containerDark .contactInfoDark .boxDark .iconDark,
+.containerLight .contactInfoLight .boxLight .iconLight {
   min-width: 60px;
   height: 60px;
   background: #fff;
@@ -52,71 +73,125 @@
   font-size: 1.75em;
   transition: 0.5s;
 }
-.container .contactInfo .box:hover .icon {
+.containerLight .contactInfoLight .boxLight .iconLight  {
+  background: gray;
+  color: #fff;
+}
+.containerDark .contactInfoDark .boxDark:hover .iconDark,
+.containerLight .contactInfoLight .boxLight:hover .iconLight {
   background: #00bcd4;
   color: #fff;
 }
-.container .contactInfo .box .text {
+.containerLight .contactInfoLight .boxLight:hover .iconLight {
+  background: #e91e63;
+  color: #fff;
+}
+.containerDark .contactInfoDark .boxDark .textDark,
+.containerLight .contactInfoLight .boxLight .textLight {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   font-size: 1.1em;
   color: #fff;
   font-weight: 300;
+  transition: 0.5s;
 }
-.container .contactInfo .box .text h3 {
+.containerLight .contactInfoLight .boxLight .textLight {
+  color: black;
+}
+.containerDark .contactInfoDark .boxDark .textDark h3,
+.containerLight .contactInfoLight .boxLight .textLight h3 {
   font-weight: 500;
   color: #00bcd4;
+  transition: 0.5s;
 }
-.container .contactInfo .txt {
+.containerLight .contactInfoLight .boxLight .textLight h3 {
+  color: #e91e63;
+}
+.containerDark .contactInfoDark .txtDark,
+.containerLight .contactInfoLight .txtLight {
   color: #fff;
   margin-top: 50px;
   font-weight: 500;
   padding-left: 10px;
   border-left: 50px solid #e91e63;
   line-height: 1em;
+  transition: 0.5s;
 }
-.sci {
+.containerLight .contactInfoLight .txtLight {
+  color: black;
+  border-left: 50px solid #00bcd4;
+}
+.sciDark,
+.sciLight {
   position: relative;
   display: flex;
   gap: 30px;
   margin: 20px 0;
 }
-.sci li a {
+.sciDark li a,
+.sciLight li a {
   color: #fff;
   font-size: 2em;
   transition: 0.5s;
 }
-.sci li a:hover {
+.sciLight li a {
+  color: gray;
+}
+.sciDark li a:hover,
+.sciLight li a:hover {
   color: #00bcd4;
 }
-.container .contactForm {
+.sciLight li a:hover {
+  color: #e91e63;
+}
+.containerDark .contactFormDark,
+.containerLight .contactFormLight {
   position: relative;
   width: 40%;
   background: #fff;
   min-height: 100px;
   padding: 60px;
+  transition: 0.5s;
 }
-.container .contactForm h2 {
+.containerLight .contactFormLight {
+  background: gray;
+}
+.containerDark .contactFormDark h2,
+.containerLight .contactFormLight h2 {
   font-size: 2em;
   color: #333;
   font-weight: 500;
+  transition: 0.5s;
 }
-.container .contactForm .inputBox {
+.containerLight .contactFormLight h2 {
+  color: #fff;
+}
+.containerDark .contactFormDark .inputBoxDark,
+.containerLight .contactFormLight .inputBoxLight {
   position: relative;
   width: 100%;
   margin-top: 20px;
 }
-.container .contactForm .inputBox input,
-.container .contactForm .inputBox textarea {
+.containerDark .contactFormDark .inputBoxDark input,
+.containerDark .contactFormDark .inputBoxDark textarea,
+.containerLight .contactFormLight .inputBoxLight input,
+.containerLight .contactFormLight .inputBoxLight textarea {
   width: 100%;
   padding: 5px 0;
   font-size: 1.1em;
   margin: 10px 0;
   border-bottom: 2px solid #333;
   resize: none;
+  transition: 0.5s;
 }
-.container .contactForm .inputBox span {
+.containerLight .contactFormLight .inputBoxLight input,
+.containerLight .contactFormLight .inputBoxLight textarea  {
+  background: gray;
+  border-bottom: 2px solid #fff;
+}
+.containerDark .contactFormDark .inputBoxDark span,
+.containerLight .contactFormLight .inputBoxLight span {
   position: absolute;
   left: 0;
   pointer-events: none;
@@ -126,15 +201,30 @@
   color: #666;
   transition: 0.5s;
 }
-.container .contactForm .inputBox input:focus ~ span,
-.container .contactForm .inputBox textarea:focus ~ span,
-.container .contactForm .inputBox input:valid ~ span,
-.container .contactForm .inputBox textarea:valid ~ span {
+.containerLight .contactFormLight .inputBoxLight span {
+  color: #e4dede;
+}
+.containerDark .contactFormDark .inputBoxDark input:focus ~ span,
+.containerDark .contactFormDark .inputBoxDark textarea:focus ~ span,
+.containerDark .contactFormDark .inputBoxDark input:valid ~ span,
+.containerDark .contactFormDark .inputBoxDark textarea:valid ~ span,
+.containerLight .contactFormLight .inputBoxLight input:focus ~ span,
+.containerLight .contactFormLight .inputBoxLight textarea:focus ~ span,
+.containerLight .contactFormLight .inputBoxLight input:valid ~ span,
+.containerLight .contactFormLight .inputBoxLight textarea:valid ~ span {
   color: #e91e63;
   font-size: 0.9em;
   transform: translateY(-20px);
+  transition: 0.5s;
 }
-.container .contactForm .inputBox input[type="submit"] {
+.containerLight .contactFormLight .inputBoxLight input:focus ~ span,
+.containerLight .contactFormLight .inputBoxLight textarea:focus ~ span,
+.containerLight .contactFormLight .inputBoxLight input:valid ~ span,
+.containerLight .contactFormLight .inputBoxLight textarea:valid ~ span {
+  color: #00bcd4;
+}
+.containerDark .contactFormDark .inputBoxDark input[type="submit"],
+.containerLight .contactFormLight .inputBoxLight input[type="submit"] {
   width: 100px;
   background: #00bcd4;
   color: #fff;
@@ -143,21 +233,30 @@
   padding: 10px;
   font-size: 1.1em;
   font-weight: 500;
+  transition: 0.5s;
+}
+.containerLight .contactFormLight .inputBoxLight input[type="submit"] {
+  background: #e91e63;
 }
 
 /* lets make it responsive */
 @media (max-width: 991px) {
-  .contact {
-    padding: 50px;
+  .contactDark,
+  .contactLight  {
+    padding: 100px 50px;
   }
-  .container {
+  .containerDark,
+  .containerLight {
     flex-direction: column;
   }
-  .container .contactInfo,
-  .container .contactForm {
+  .containerDark .contactInfoDark,
+  .containerDark .contactFormDark,
+  .containerLight .contactInfoLight,
+  .containerLight .contactFormLight {
     width: 100%;
   }
-  .container .contactForm {
+  .containerDark .contactFormDark,
+  .containerLight .contactFormLight {
     padding: 50px 30px;
   }
 }

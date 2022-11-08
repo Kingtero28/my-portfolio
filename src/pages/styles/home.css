@@ -5,7 +5,8 @@
   align-items: center;
   min-height: 100vh;
   background: #333;
-  padding-bottom: 80px;
+  padding-top: 80px;
+  /* padding-bottom: 80px; */
   transition: 0.5s;
 }
 .homeLight {

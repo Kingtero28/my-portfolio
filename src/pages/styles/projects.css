@@ -2,8 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* flex-direction: column; */
   min-height: 100vh;
   background: #333;
+  padding: 80px 0;
 }
 .container-projects {
   position: relative;
@@ -45,7 +47,7 @@
   border-radius: 50%;
   transition-delay: 0s;
 }
-.container-projects .serviceBox .content {
+.container-projects .serviceBox .contentDark {
   position: relative;
   padding: 20px;
   color: #fff;
@@ -56,15 +58,15 @@
   transition: 0.5s;
   transition-delay: 0s;
 }
-.container-projects .serviceBox:hover .content {
+.container-projects .serviceBox:hover .contentDark {
   transform: scale(1);
   transition-delay: 0.25s;
 }
-.container-projects .serviceBox .content h2 {
+.container-projects .serviceBox .contentDark h2 {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-.container-projects .serviceBox .content p {
+.container-projects .serviceBox .contentDark p {
   font-weight: 300;
   line-height: 1.5em;
 }
