@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/bottomNavigationBar.css'
 
-const BottomNavigationBar = () => {
+const BottomNavigationBar = ({ switchToggleButton }) => {
 
   const [switchMenuToggle, setSwitchMenuToggle] = useState(false)
 
@@ -13,8 +13,14 @@ const BottomNavigationBar = () => {
   return (
     <body className='bottomNavigationBar'>
       <div className='navigation'>
-        <div onClick={handleToggleSwitch} className={switchMenuToggle ? 'menuToggleClosed' : 'menuToggleOpen'}><i></i></div>
-        <div className='menu'>
+        <div onClick={handleToggleSwitch} className={switchMenuToggle ? 
+                                                      switchToggleButton ? 'menuToggleClosedLight' : 'menuToggleClosedDark' 
+                                                    : 
+                                                      switchToggleButton ? 'menuToggleOpenLight' : 'menuToggleOpenDark' 
+                                                    }
+        ><i></i>
+        </div>
+        <div className={switchToggleButton ? 'menuLight' : 'menuDark'}>
           <ul>
             <li><Link to='/'><ion-icon name="home-outline"></ion-icon></Link></li>
             <li><Link to='/skills'><ion-icon name="person-outline"></ion-icon></Link></li>

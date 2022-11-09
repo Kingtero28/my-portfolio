@@ -18,8 +18,12 @@ const Home = ({ switchToggleButton }) => {
               <h3>285<br /><span>Following</span></h3>
             </div>
             <div className={switchToggleButton ? 'cardLight__content__actionBtn' : 'cardDark__content__actionBtn'}>
-              <button>LinkedIn</button>
-              <button>Mi CV</button>
+              <a href="https://www.linkedin.com/in/daniel-quintero-kingtero28/" target="_blank">
+                <button className={switchToggleButton ? 'btnHomeLight' : 'btnHomeDark'}>LinkedIn</button>
+              </a>
+              <a href="https://drive.google.com/file/d/1GICejhTLs5KiAnQd_ZaVyfKmyapBqf9P/view?usp=sharing" target="_blank">
+                <button className={switchToggleButton ? 'btn2HomeLight' : 'btn2HomeDark'}>Mi CV</button>
+              </a>
             </div>
           </div>
         </div>

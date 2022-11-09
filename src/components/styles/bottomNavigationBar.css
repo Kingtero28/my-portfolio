@@ -6,7 +6,7 @@
   /* min-height: 100vh; */
   background: transparent;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   bottom: 0;
   z-index: 2;
 }
@@ -17,13 +17,15 @@
   align-items: center;
   margin-bottom: 30px;
 }
-.menuToggleOpen,
-.menuToggleClosed {
+.menuToggleOpenDark,
+.menuToggleClosedDark,
+.menuToggleOpenLight,
+.menuToggleClosedLight {
   position: relative;
   width: 65px;
   height: 65px;
   background: #ff4886;
-  border: 5px solid #333;
+  /* border: 5px solid rgba(0,0,0,0); */
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -31,9 +33,16 @@
   align-items: center;
   z-index: 10;
   transform: translateY(-30px);
+  transition: 0.5s;
 }
-.menuToggleOpen::before,
-.menuToggleClosed::before {
+.menuToggleOpenLight,
+.menuToggleClosedLight {
+  background: #00bcd4;
+}
+.menuToggleOpenDark::before,
+.menuToggleClosedDark::before,
+.menuToggleOpenLight::before,
+.menuToggleClosedLight::before {
   content: '+';
   position: absolute;
   font-size: 3em;
@@ -41,16 +50,19 @@
   color: #fff;
   transition: 1.5s;
 }
-.menuToggleClosed:before {
+.menuToggleClosedDark:before,
+.menuToggleClosedLight:before {
   transform: rotate(225deg);
 }
-.menuToggleOpen i,
-.menuToggleClosed i {
+.menuToggleOpenDark i,
+.menuToggleClosedDark i,
+.menuToggleOpenLight i,
+.menuToggleClosedLight i {
   position: absolute;
   inset: 0;
 }
-.menuToggleOpen i::before,
-.menuToggleClosed i::before {
+/* .menuToggleOpenDark i::before,
+.menuToggleClosedDark i::before {
   content: '';
   position: absolute;
   top: 22px;
@@ -61,8 +73,8 @@
   border-top-right-radius: 20px;
   box-shadow: 3px -6px #333;
 }
-.menuToggleOpen i::after,
-.menuToggleClosed i::after {
+.menuToggleOpenDark i::after,
+.menuToggleClosedDark i::after {
   content: '';
   position: absolute;
   top: 22px;
@@ -72,8 +84,9 @@
   background: transparent;
   border-top-left-radius: 20px;
   box-shadow: -3px -6px #333;
-}
-.menu {
+} */
+.menuDark,
+.menuLight {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -83,13 +96,18 @@
   transition: transform 0.5s, width 0.5s, height 0.5s;
   transition-delay: 1s,0.5s,0.5s;
 }
-.menuToggleClosed ~ .menu {
+.menuLight {
+  background: rgb(111, 103, 103);
+}
+.menuToggleClosedDark ~ .menuDark,
+.menuToggleClosedLight ~ .menuLight {
   width: 360px;
   height: 70px;
   transform: translateY(0px);
   transition-delay: 0s,0.5s,0.5s;
 }
-.menu ul {
+.menuDark ul,
+.menuLight ul {
   position: relative;
   display: flex;
   justify-content: center;
@@ -97,7 +115,8 @@
   gap: 35px;
   line-height: 80px;
 }
-.menu ul li {
+.menuDark ul li,
+.menuLight ul li  {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -105,20 +124,30 @@
   transition-delay: calc(0s);
   transform: translateY(-30px);
 }
-.menuToggleClosed ~ .menu ul li {
+.menuToggleClosedDark ~ .menuDark ul li,
+.menuToggleClosedLight ~ .menuLight ul li {
   opacity: 1;
   visibility: visible;
   transition-delay: calc(0.75s);
   transform: translateY(0px);
 }
-.menu ul li:nth-child(3) {
+.menuDark ul li:nth-child(3),
+.menuLight ul li:nth-child(3) {
   width: 30px;
 }
-.menu ul li a {
+.menuDark ul li a,
+.menuLight ul li a {
   display: block;
   font-size: 2em;
   color: #555;
 }
-.menu ul li:hover a {
+.menuLight ul li a {
+  color: #fff;
+}
+.menuDark ul li:hover a,
+.menuLight ul li:hover a {
   color: #ff4886;
+}
+.menuLight ul li:hover a {
+  color: #00bcd4;
 }

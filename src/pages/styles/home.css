@@ -211,8 +211,8 @@
   justify-content: space-between;
   gap: 20px;
 }
-.cardDark .cardDark__content .cardDark__content__details .cardDark__content__actionBtn button,
-.cardLight .cardLight__content .cardLight__content__details .cardLight__content__actionBtn button {
+.btnHomeDark,
+.btnHomeLight {
   padding: 10px 30px;
   border: none;
   outline: none;
@@ -225,19 +225,26 @@
   opacity: 0.8;
   transition: 0.5s;
 }
-.cardLight .cardLight__content .cardLight__content__details .cardLight__content__actionBtn button {
+.btnHomeLight {
   background: #ff3c7b;
   color: #fff;
 }
-.cardDark .cardDark__content .cardDark__content__details .cardDark__content__actionBtn button:nth-child(2),
-.cardLight .cardLight__content .cardLight__content__details .cardLight__content__actionBtn button:nth-child(2) {
+.btn2HomeDark,
+.btn2HomeLight {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 600;
+  background: #45f3ff;
+  color: #222;
+  cursor: pointer;
+  opacity: 0.8;
   background: #ff3c7b;
   transition: 0.5s;
 }
-.cardLight .cardLight__content .cardLight__content__details .cardLight__content__actionBtn button:nth-child(2) {
-  background: #45f3ff;
-}
-.cardDark .cardDark__content .cardDark__content__details .cardDark__content__actionBtn button:hover,
-.cardLight .cardLight__content .cardLight__content__details .cardLight__content__actionBtn button:hover {
-  opacity: 1;
+.btn2HomeLight {
+  background: #00bcd4;
+  color: #fff;
 }

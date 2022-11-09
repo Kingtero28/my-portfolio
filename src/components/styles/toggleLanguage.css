@@ -1,0 +1,22 @@
+.lanEsp,
+.lanEng {
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  background: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.lanEsp::before,
+.lanEng::before {
+  content: 'ENG';
+  font-weight: 800;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lanEng::before {
+  content: 'ESP';
+}

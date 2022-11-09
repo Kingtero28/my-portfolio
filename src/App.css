@@ -1,3 +1,13 @@
 .App {
   position: relative;
 }
+.toggleButtons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 20px;
+  z-index: 2;
+  gap: 2em;
+}
